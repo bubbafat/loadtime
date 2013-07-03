@@ -14,3 +14,4 @@
 //= require jquery_ujs
 //= require_tree .
 //= require ember-1.0.0-rc.6.min
+//= d3.v3.min

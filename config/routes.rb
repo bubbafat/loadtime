@@ -1,6 +1,7 @@
 LoadTimer::Application.routes.draw do
   
   match '/' => 'speedies#index'
+  match '/graph' => 'speedies#graph'
   match '/elapsed/:id' => 'speedies#elapsed'
   
   

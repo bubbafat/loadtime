@@ -20,4 +20,9 @@ class SpeediesController < ApplicationController
 
     render :json => @speedy
   end
+  
+  def graph
+    render :json => ActiveRecord::Base.connection.execute("select count(*) as value, ((elapsed / 1000) * 1000) + 1000 as label from speedies where elapsed is not null group by ((elapsed / 1000) * 1000) + 1000")
+  end
 end
+
