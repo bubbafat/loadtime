@@ -1,0 +1,15 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
+
+one:
+  first: 2013-07-02 20:42:51
+  final: 2013-07-02 20:42:51
+  useragent: MyString
+  mobile: false
+  ipaddress: MyString
+
+two:
+  first: 2013-07-02 20:42:51
+  final: 2013-07-02 20:42:51
+  useragent: MyString
+  mobile: false
+  ipaddress: MyString

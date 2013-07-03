@@ -1,0 +1,37 @@
+<%= form_for(@speedy) do |f| %>
+  <% if @speedy.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@speedy.errors.count, "error") %> prohibited this speedy from being saved:</h2>
+
+      <ul>
+      <% @speedy.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :first %><br />
+    <%= f.datetime_select :first %>
+  </div>
+  <div class="field">
+    <%= f.label :final %><br />
+    <%= f.datetime_select :final %>
+  </div>
+  <div class="field">
+    <%= f.label :useragent %><br />
+    <%= f.text_field :useragent %>
+  </div>
+  <div class="field">
+    <%= f.label :mobile %><br />
+    <%= f.check_box :mobile %>
+  </div>
+  <div class="field">
+    <%= f.label :ipaddress %><br />
+    <%= f.text_field :ipaddress %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

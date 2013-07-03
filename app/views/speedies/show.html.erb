@@ -1,0 +1,30 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>First:</b>
+  <%= @speedy.first %>
+</p>
+
+<p>
+  <b>Final:</b>
+  <%= @speedy.final %>
+</p>
+
+<p>
+  <b>Useragent:</b>
+  <%= @speedy.useragent %>
+</p>
+
+<p>
+  <b>Mobile:</b>
+  <%= @speedy.mobile %>
+</p>
+
+<p>
+  <b>Ipaddress:</b>
+  <%= @speedy.ipaddress %>
+</p>
+
+
+<%= link_to 'Edit', edit_speedy_path(@speedy) %> |
+<%= link_to 'Back', speedies_path %>

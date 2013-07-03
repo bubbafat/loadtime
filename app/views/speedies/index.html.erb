@@ -1,0 +1,41 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Start:</b>
+  <%= @speedy.first %>
+</p>
+
+<p>
+  <b>Final:</b>
+  <div id="final">
+    <span>Waiting...</span>
+  </div>
+</p>
+
+<p>
+  <b>Elapsed (ms):</b>
+  <div id="elapsed">
+    <span>Waiting...</span>
+  </div>
+</p>
+
+<p>
+  <b>Recent Averages (ms):</b>
+  <div id="avg">
+    <span>Waiting...</span>
+  </div>
+</p>
+
+<script language="javascript">
+  $(document).ready(function(){
+    //defers js to load on document ready
+    
+    $.getJSON(
+        <%=raw '\'/elapsed/' + @speedy.id.to_s + '\'' %>, 
+        function(data) {
+          $("#final span").text(data.final);
+          $("#elapsed span").text(data.elapsed);
+          $("#avg span").text(data.avg);
+    });
+  });
+</script>

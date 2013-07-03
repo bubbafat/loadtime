@@ -1,0 +1,8 @@
+--- 
+cursor_positions: 
+  - :path: app/controllers/time_it_controller_controller.rb
+    :cursor_offset: 225
+    :timestamp: 2013-07-02 20:29:05.154000 -04:00
+    :selection_offset: 132
+    :block_selection_mode: false
+files_to_retain: 0
