@@ -1,4 +1,4 @@
-1372826243
+1372827099
 AddElapsedToSpeedy	C:/Sites/LoadTimer/db/migrate/20130703021115_add_elapsed_to_speedy.rb	class AddElapsedToSpeedy 
 Application	C:/Sites/LoadTimer/config/application.rb	  class Application 
 ApplicationController	C:/Sites/LoadTimer/app/controllers/application_controller.rb	class ApplicationController 

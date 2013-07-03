@@ -39,11 +39,21 @@
     });
   });
 
+  Array.max = function( array ){
+    return Math.max.apply( Math, array );
+  };
   
   d3.json("/graph", function(error, data) {
   
+    var data_max = Math.max.apply(Math, 
+      data.map(function(record){
+        return record.value;
+      }));
+      
+    data_max = data_max * 1.1;
+    
     //maximum of data you want to use
-    var data_max = 80,
+    //var data_max = 80,
 
     //number of tickmarks to use
     num_ticks = 5,
@@ -158,7 +168,7 @@
         .attr("text-anchor", "left")
         .text(function(d)
         {
-        return "" + d.value + "%";
+        return "" + d.value;
         });
 
     bbox = labels.node().getBBox();
